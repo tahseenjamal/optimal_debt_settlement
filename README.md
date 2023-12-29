@@ -13,6 +13,8 @@ build by running
 
 For testing purpose there is a large transactions file, which has volume of transaction and settling in that order would be very cumbersome
 
+    ./main large_transactions.csv 
+    
     Original number of transactions: 88 
     Optimized Number of transactions for settlement of debt: 
     8 f owes c 1306 
@@ -26,6 +28,8 @@ For testing purpose there is a large transactions file, which has volume of tran
 
 There is also a small transaction file for the purpose of quick testing by eye balling the results
 
+    ./main small_transactions.csv
+    
     Original number of transactions: 8 
     Optimized Number of transactions for settlement of debt: 3 
     d owes c 411 
