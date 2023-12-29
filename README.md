@@ -9,7 +9,7 @@ It won't be an efficient thing to transfer 100 times, instead you would prefer n
 
 build by running
 
-gcc main.c -i main
+    gcc main.c -i main
 
 For testing purpose there is a large transactions file, which has volume of transaction and settling in that order would be very cumbersome
 
