@@ -13,21 +13,22 @@ gcc main.c -i main
 
 For testing purpose there is a large transactions file, which has volume of transaction and settling in that order would be very cumbersome
 
-Original number of transactions: 88 
-Optimized Number of transactions for settlement of debt: 
-8 f owes c 1306 
-f owes a 1117 
-f owes i 722 
-f owes h 238 
-f owes e 187 
-d owes f 559 
-j owes f 601 
-g owes f 617
+    Original number of transactions: 88 
+    Optimized Number of transactions for settlement of debt: 
+    8 f owes c 1306 
+    f owes a 1117 
+    f owes i 722 
+    f owes h 238 
+    f owes e 187 
+    d owes f 559 
+    j owes f 601 
+    g owes f 617
 
 There is also a small transaction file for the purpose of quick testing by eye balling the results
 
-Original number of transactions: 8 
-Optimized Number of transactions for settlement of debt: 3 
-d owes c 411 
-d owes a 336 
-b owes d 29
+    Original number of transactions: 8 
+    Optimized Number of transactions for settlement of debt: 3 
+    d owes c 411 
+    d owes a 336 
+    b owes d 29
+
