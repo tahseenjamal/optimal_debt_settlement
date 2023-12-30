@@ -48,7 +48,7 @@ void initializePerson(Transaction* transactions, int num_transactions) {
     // Iterate through the transactions and extract the debtor and creditor information
     // to create unique list of people
     
-    for (int i = 0; i < num_transactions; ++i) {
+    for (int i = 0; i < num_transactions; i++) {
         // Extract debtor and creditor information
         char *debtor = transactions[i].debtor;
         char *creditor = transactions[i].creditor;
