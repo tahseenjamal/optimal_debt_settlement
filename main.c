@@ -104,7 +104,7 @@ int compare(const void *a, const void *b) {
 
 
 // Function to calculate the minimum number of transactions required to settle the debt
-void min_transactions(Transaction *transactions, int num_transactions) {
+void optimum_transactions(Transaction *transactions, int num_transactions) {
 
     // Initialize balances unique list of people with their names and zero balance
     initializePerson(transactions, num_transactions);
@@ -247,6 +247,7 @@ Transaction* read_csv_into_transactions(char* filename) {
     // Close the file
     fclose(fp);
 
+    // Return array of transactions that have been read from csv file
     return transactions;    
 }
 
@@ -255,13 +256,27 @@ int main(int argc, char** argv) {
 
     Transaction* transactions;
 
-    int num_transactions = number_of_lines_in_a_file(argv[1]);
+    // Check if the filename is provided as an argument
+    // If not, then exit the program
+    
+    if (argc < 2) {
+        printf("Please provide the csv file name after the executable\n");
+        printf("Example: ./main transactions.csv\n");
+        exit(1);
+    }
+    char* filename = argv[1];
+
+    // Finds the number of transactions in the csv file
+    // This is used to allocate memory for the transactions array
+    int num_transactions = number_of_lines_in_a_file(filename);
 
     printf("Original number of transactions: %d\n", num_transactions);
 
-    transactions = read_csv_into_transactions(argv[1]);
+    // Reads the transactions in the csv file into an array of transactions
+    transactions = read_csv_into_transactions(filename);
 
-    min_transactions(transactions, num_transactions);
+    // Calculate the optimum number of transactions required to settle the debt
+    optimum_transactions(transactions, num_transactions);
     
     return 0;
 }
