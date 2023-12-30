@@ -252,7 +252,6 @@ Transaction* read_csv_into_transactions(char* filename) {
 
 
 int main(int argc, char** argv) {
-    // Example transactions, replace with your own data
 
     Transaction* transactions;
 
